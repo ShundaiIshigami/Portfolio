@@ -21,7 +21,7 @@ export interface Skill{
     varsion: string | null
     level: number
     category: string
-    capabilites: string
+    capabilities : string[]
     note: string | null
 
 }
@@ -50,7 +50,7 @@ export interface Work{
     techPoints: string | null
     designNotes: string | null
     implementationTheme: string | null
-    troublesooting: string | null
+    troubleshooting: string | null
     performance: string | null
 }
 
@@ -59,7 +59,7 @@ export interface GameJam{
     date: string
     theme: string   
     description: string
-    platform: string
+    platform: string[]
     role: string
     team: string
     result: string | null
@@ -106,7 +106,7 @@ export const skill : Skill[]=[
         varsion: null,
         level: 0,
         category: "",
-        capabilites: "",
+        capabilities: [],
         note: null
     }
 ]
@@ -131,7 +131,7 @@ export const works: Work[]=[
         techPoints: null,
         designNotes: null,
         implementationTheme: null,
-        troublesooting: null,
+        troubleshooting: null,
         performance: null
     },//配列ごとに
 ]
@@ -141,7 +141,7 @@ export const gameJam: GameJam[]=[
         date: "",
         theme: "",
         description: "",
-        platform: "",
+        platform: [],
         role: "",
         team: "",
         result: null,
