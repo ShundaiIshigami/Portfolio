@@ -1,3 +1,15 @@
+function HomePage(){
+  return(
+    <>
+      <Hero/>
+      <About/>
+      <Skills/>
+      <Works/>
+    </>
+  )
+}
+
+
 export default function app()
 {
   return(

@@ -19,7 +19,7 @@ interface LevelConfig{
 const LEVEL_CONFIG: LevelConfig[]=[
     {max:40,label:'学習中',color:'#888'},
     {max:60,label:'基礎あり',color:'#60A5FA'},
-    {max:80,label:'実践可',color:'#A78BFA'}
+    {max:80,label:'実践可',color:'#A78BFA'},
     {max:100,label:'得意',color:'#F472B6'}
 ]
 
@@ -35,11 +35,38 @@ function SkillCard({skill}:{skill:Skill}){
             <div className="skill-card-header">
                 <div className="skill-card-title-row">
                     <span className="skill-card-name">{skill.name}</span>
-                    <span className="skill-card-vesion">{skill.version}</span>                
+                    <span className="skill-card-vesion">{skill.varsion}</span>                
                 </div>
+                <span
+                className="skill-card-badge"
+                style={{color: config.color ,borderColor: config.color}}
+                >
+                    {config.label}
+                </span>
+
+
             </div>
+
+
+            <div className="skill-bar-bg">
+                <div
+                className="skill-bar-fill"
+                style={{width: `${skill.level}%`}}/>
+            </div>
+
+            <ul className="skill-capabilities">
+                {skill.capabilities.map((cap)=>(
+                    <li key={cap} className="skill-cap-tag">{cap}</li>
+                ))}
+            </ul>
+            {skill.note && (
+                <p className="skill-note">
+                    <span className="skill-note-icon"></span>
+                    {skill.note}
+                </p>
+            )}
         </div>
-    )
+    );
 }
 
 export default function Skills(){
