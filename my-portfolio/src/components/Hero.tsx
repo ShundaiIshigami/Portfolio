@@ -1,4 +1,5 @@
 import { profile } from "../data/portfolio";
+import SafeImg from "./SafeImg";
 
 
 export default function Hero(){
@@ -8,6 +9,11 @@ export default function Hero(){
 
                 {/*顔写真を乗っけるところ*/}
                 <div className="avater-placeholder">T</div>
+                    <SafeImg
+                        src={profile.avater}
+                        alt={profile.name}
+                        fallback={profile.nameEn.charAt(0)}
+                    />
                 <p className="hero-eyebrow">Portfolio</p>
 
                 {/*名前表示*/}

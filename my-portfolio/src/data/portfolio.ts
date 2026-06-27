@@ -117,7 +117,7 @@ export const works: Work[]=[
         title: "",
         genre: "",
         category: "",
-        thumbnail: "",
+        thumbnail: "/image/games/←ここに入れた画像のファイル名をここに書く",
         screenshots: [],
         description: "",
         tags: [],
