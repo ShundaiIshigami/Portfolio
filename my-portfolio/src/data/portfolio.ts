@@ -1,14 +1,16 @@
 //プロフィール情報定義
+
+
 export interface Profile{
-    name: string
-    nameEn: string
-    role: string
-    school: string
-    department: string
-    graduationYear: string
-    bio: string
-    motto: string
-    avater: string
+    name: string// 名前漢字表記.
+    nameEn: string// 名前ローマ字表記.
+    role: string// ロール.
+    school: string// 学校名.
+    department: string// 専攻名.
+    graduationYear: string// 卒業年度.
+    bio: string// 自己紹介文.
+    motto: string// モットー、座右の銘.
+    avatar: string// 顔写真の画像パス.
     links:{
         github: string
         twitter: string | null
@@ -18,7 +20,7 @@ export interface Profile{
 
 export interface Skill{
     name: string
-    varsion: string | null
+    version: string | null
     level: number
     category: string
     capabilities : string[]
@@ -57,7 +59,7 @@ export interface Work{
 export interface GameJam{
     name: string
     date: string
-    theme: string   
+    theme: string
     description: string
     platform: string[]
     role: string
@@ -67,7 +69,7 @@ export interface GameJam{
     reflection: string
 }
 
-export type CerStatus="取得済み" | "受験予定" | "取得予定" | "学習中";
+export type CertStatus="取得済み" | "受験予定" | "取得予定" | "学習中";
 
 export interface Certification{
     name: string
@@ -84,29 +86,29 @@ export interface TimelineItem{
 }
 
 export const profile: Profile ={
-    name: "",
-    nameEn: "",
-    role: "",
-    school: "",
-    department: "",
-    graduationYear: "",
+    name: "石上竣大",
+    nameEn: "ShundaiIshigami",
+    role: "プログラマー",
+    school: "京都デザイン&テクノロジー専門学校",
+    department: "ゲームプログラマー専攻",
+    graduationYear: "2027年3月卒業見込み",
     bio: "",
     motto: "",
-    avater: "",
+    avatar: "/images/profile.jpg",
     links: {
-        github: "",
+        github: "https://github.com/ShundaiIshigami",
         twitter: null,
-        email: ""
+        email: "ktc24a32a0001@edu.kyoto-tech.ac.jp"
     }
 }
-export const skill : Skill[]=[
+export const skills : Skill[]=[
 
     {
-        name: "",
-        varsion: null,
-        level: 0,
-        category: "",
-        capabilities: [],
+        name: "Unity",
+        version: null,
+        level: 40,
+        category: "game",
+        capabilities: ['3D/2Dゲーム開発','UI作成'],
         note: null
     }
 ]
@@ -149,8 +151,9 @@ export const gameJam: GameJam[]=[
         reflection: ""
     }
 ]
-    
-export const certification: Certification[]=[
+
+
+export const certifications: Certification[]=[
     {
         name: "",
         date: "",
@@ -158,7 +161,7 @@ export const certification: Certification[]=[
         score: null,
         status: ""
     }
-] 
+]
 
 export const timeline: TimelineItem[]=[
     {

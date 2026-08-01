@@ -1,5 +1,6 @@
-import { use, useState } from "react"
-import { skill, type Skill } from "../data/portfolio"
+import { useState } from "react"
+import { skills, type Skill } from "../data/portfolio";
+
 
 
 const CATEGORY_LABELS:Record<string,string>={
@@ -35,7 +36,7 @@ function SkillCard({skill}:{skill:Skill}){
             <div className="skill-card-header">
                 <div className="skill-card-title-row">
                     <span className="skill-card-name">{skill.name}</span>
-                    <span className="skill-card-vesion">{skill.varsion}</span>                
+                    <span className="skill-card-vesion">{skill.version}</span>                
                 </div>
                 <span
                 className="skill-card-badge"
@@ -71,14 +72,13 @@ function SkillCard({skill}:{skill:Skill}){
 
 export default function Skills(){
     const [activeCategory,setActiveCategory]=useState('all')
-    const categories =['all', ...new Set(Skills.map((s)=>(
-        s.catgory
-    )))] 
-    const filtered=activeCategory==='all'
+    const categories =["all", ...new Set(skills.map((s)=>(s.category)))] 
+    const filtered =
+        activeCategory === "all"
     ?skills
     :skills.filter((s)=>s.category===activeCategory)
 
-    return(
+    return (
         <section className="section" id="skills">
             <div className="container">
                 <h2 className="section-title">
@@ -86,32 +86,28 @@ export default function Skills(){
                 </h2>
                 <p className="section-sub">技術スタック</p>
                 <div className="skills-categories">
-                    {categories.map((cat)=>(
+                    {categories.map((cat) => (
                         <button
-                          key={cat}
-                          className={`skills-filter-btn
-                                        ${activeCategory===cat ? "active" : ""}`}
-                          onClick={()=>setActiveCategory(cat)}
+                            key={cat}
+                            className={`skills-filter-btn
+                                        ${activeCategory === cat ? "active" : ""}`}
+                            onClick={() => setActiveCategory(cat)}
                         >
-                          {CATEGORY_LABELS[cat] ?? cat}
+                            {CATEGORY_LABELS[cat] ?? cat}
                         </button>
                     ))}
                 </div>
 
                 <div className="skills-grid">
-                    {filtered.map((skill)=>(
-                        <SkillCard key={skill.name} skill={skill}/>
+                    {filtered.map((skill) => (
+                        <SkillCard key={skill.name} skill={skill} />
                     ))}
                 </div>
 
-                <div className="skills-grid">
-                  {filtered.map((skill)=>(
-                    <SkillCard key={skill.name} skill={skill} />
-                  ))}
-                </div>
+                
 
             </div>
 
         </section>
-    )
+    );
 }

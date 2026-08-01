@@ -1,3 +1,5 @@
+// src/components/About.tsx
+
 import { profile, timeline } from "../data/portfolio";
 
 
@@ -18,16 +20,24 @@ export default function About(){
                         <dl className="profile-school">
                             <div className="profile-school-row">
                                 <dt>学校</dt>
-                                <dd>{profile.school}</dd>
+                                <dd>
+                                    {profile.school}
+
+                                </dd>
                             </div>
 
                             <div className="profile-school-row">
                                 <dt>学科</dt>
-                                <dd>{profile.department}</dd>
+                                <dd>
+                                    {profile.department}
+
+                                </dd>
                             </div>
                             <div className="profile-school-row">
                                 <dt>卒業</dt>
-                                <dd className="profile-graduation">{profile.graduationYear}</dd>
+                                <dd className="profile-graduation">
+                                    {profile.graduationYear}
+                                </dd>
                             </div>
                         </dl>
 
@@ -37,13 +47,21 @@ export default function About(){
                         <ul className="timeline">
                             {timeline.map((item,index)=>(
                                 <li key={index}>
-                                    <p className="timeline-year">{item.year}</p>
-                                    <p className="timeline-event">{item.event}</p>
+                                    <p className="timeline-year">
+                                        {item.year}
+                                    </p>
+                                    <p className="timeline-event">
+                                        {item.event}
+                                    </p>
                                 </li>
                             ))}
                         </ul>
                     </div>
+
+
                 </div>
+
+
             </div>
         </section>
     )

@@ -8,19 +8,20 @@ export default function Hero(){
             <div className="container">
 
                 {/*顔写真を乗っけるところ*/}
-                <div className="avater-placeholder">T</div>
+                <div className="avatar-placeholder">
                     <SafeImg
-                        src={profile.avater}
+                        src={profile.avatar}
                         alt={profile.name}
                         fallback={profile.nameEn.charAt(0)}
                     />
+                </div>
                 <p className="hero-eyebrow">Portfolio</p>
 
                 {/*名前表示*/}
                 <h1 className="hero-name">
                     <span className="gradient">{profile.name}</span>
                     <span className="hero-name-en">{profile.nameEn}</span>
-                
+                    
                 </h1>
 
                 <p className="hero-role">{profile.role}</p>
