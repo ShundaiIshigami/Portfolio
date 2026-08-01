@@ -71,12 +71,12 @@ export interface GameJam{
 
 export type CertStatus="取得済み" | "受験予定" | "取得予定" | "学習中";
 
-export interface Certification{
+export interface Certification {
     name: string
     date: string
     category: string
     score: string | null
-    status: string
+    status: CertStatus
 }
 
 //年表
@@ -115,6 +115,30 @@ export const skills : Skill[]=[
 
 export const works: Work[]=[
     {
+        id: 1,
+        title: "LostMemory",
+        genre: "2Dアクション/ステージクリア型",
+        category: "game",
+        thumbnail: "/images//←ここに入れた画像のファイル名をここに書く",
+        screenshots: ['/images/'],
+        description: "説明",
+        tags: ['Unity','C#'],
+        platform: ['Windows'],
+        period: "2025年5月~2026年2月",
+        team: "プランナー１人プログラマー３人",
+        role: "プログラマー",
+        github: "https://github.com/rukarukahamada/LostMemory.git",
+        link: null,
+        venues: [
+            {name:'どこで',date:'いつ'},
+        ],
+        techPoints: 'こだわった技術ポイント...',
+        designNotes:  '設計上の工夫...',
+        implementationTheme: '実装解説テーマ（1文）',
+        troubleshooting: '詰まった問題と解決策...',
+        performance: 'パフォーマンス改善の工夫...'
+    },//配列ごとに
+    {
         id: 0,
         title: "",
         genre: "",
@@ -135,7 +159,7 @@ export const works: Work[]=[
         implementationTheme: null,
         troubleshooting: null,
         performance: null
-    },//配列ごとに
+    }
 ]
 export const gameJam: GameJam[]=[
     {
@@ -159,7 +183,7 @@ export const certifications: Certification[]=[
         date: "",
         category: "",
         score: null,
-        status: ""
+        status: '取得予定'
     }
 ]
 
