@@ -92,8 +92,8 @@ export const profile: Profile ={
     school: "京都デザイン&テクノロジー専門学校",
     department: "ゲームプログラマー専攻",
     graduationYear: "2027年3月卒業見込み",
-    bio: "",
-    motto: "",
+    bio: "私の強みは、課題に対して自ら考え、主体的に動く行動力です。学校でのチーム制作では、脱退したメンバーの担当箇所を引き継ぐ際、AI等を活用して未知のコードを自力で解読・理解し、制作を進めることができました。さらに、制作途中で「PlayerInputを1つのオブジェクトに集約する」という効率的な手法を学んだ際には、全体のクオリティ向上のため自発的に既存コードの再構築を行いました。このように、予期せぬトラブルにも自力で調べて対応する「解決力」と、より良い構造を目指して自発的に行動できる「探求心」が私の強みです。",
+    motto: "何事も柔軟に適切に",
     avatar: "/images/icon.png",
     links: {
         github: "https://github.com/ShundaiIshigami",
@@ -106,9 +106,17 @@ export const skills : Skill[]=[
     {
         name: "Unity",
         version: null,
-        level: 40,
+        level: 60,
         category: "game",
         capabilities: ['3D/2Dゲーム開発','UI作成'],
+        note: null
+    },
+    {
+        name: "C#",
+        version: null,
+        level: 50,
+        category: "game",
+        capabilities: ['3D/2Dゲーム開発'],
         note: null
     }
 ]
