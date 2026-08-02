@@ -98,7 +98,7 @@ export const profile: Profile ={
     links: {
         github: "https://github.com/ShundaiIshigami",
         twitter: null,
-        email: "ktc24a32a0001@edu.kyoto-tech.ac.jp"
+        email: "25shun431@gmail.com"
     }
 }
 export const skills : Skill[]=[
