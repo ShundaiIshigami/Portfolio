@@ -94,7 +94,7 @@ export const profile: Profile ={
     graduationYear: "2027年3月卒業見込み",
     bio: "",
     motto: "",
-    avatar: "/images/profile.jpg",
+    avatar: "/images/icon.jpg",
     links: {
         github: "https://github.com/ShundaiIshigami",
         twitter: null,
@@ -119,9 +119,9 @@ export const works: Work[]=[
         title: "LostMemory",
         genre: "2Dアクション/ステージクリア型",
         category: "game",
-        thumbnail: "/images//←ここに入れた画像のファイル名をここに書く",
-        screenshots: ['/images/'],
-        description: "説明",
+        thumbnail: "/images/games/losttitle.png",
+        screenshots: ['/images/games/lostmemory.png'],
+        description: "学校の合同ゲーム制作で作成しました。",
         tags: ['Unity','C#'],
         platform: ['Windows'],
         period: "2025年5月~2026年2月",
@@ -130,35 +130,37 @@ export const works: Work[]=[
         github: "https://github.com/rukarukahamada/LostMemory.git",
         link: null,
         venues: [
-            {name:'どこで',date:'いつ'},
+            {name:'学校の若きクリエーター展',date:'2026年2月'},
         ],
-        techPoints: 'こだわった技術ポイント...',
-        designNotes:  '設計上の工夫...',
-        implementationTheme: '実装解説テーマ（1文）',
-        troubleshooting: '詰まった問題と解決策...',
-        performance: 'パフォーマンス改善の工夫...'
+        techPoints: 'ＨＰゲージの灰色部分を実装するためにユニタスクのＡｗａｉｔを使ったこと。',
+        designNotes:  '途中でプレイヤーインプットをシーン上の一つのオブジェクトにまとめたほうがいいと知りまとめるためにいろいろなコードを書き直したこと。',
+        implementationTheme: null,
+        troubleshooting: '他の人が途中でチームを抜けたときその人が担当していたところを引き継ぎＡＩなどでどのようなコードかを調べたこと　オーディオやＳＥが思ったようにしてならなかったのでシングルトンなどを利用したこと。',
+        performance: null
     },//配列ごとに
     {
-        id: 0,
-        title: "",
-        genre: "",
-        category: "",
-        thumbnail: "/image/games/←ここに入れた画像のファイル名をここに書く",
-        screenshots: [],
-        description: "",
-        tags: [],
-        platform: [],
-        period: "",
-        team: "",
-        role: "",
-        github: "",
-        link: null,
-        venues: [],
-        techPoints: null,
+        id: 2,
+        title: "Hole",
+        genre: "2Dアクション/横スクロール",
+        category: "game",
+        thumbnail: "/image/games/holetitle.png",
+        screenshots: ["/images/games/hole.png"],
+        description: "学校の合同ゲーム制作で作成しました。",
+        tags: ['Unity','C#'],
+        platform: ['Windows'],
+        period: "2024年10月~2025年2月",
+        team: "プランナー１人プログラマー４人デザイナー２人",
+        role: "プログラマー",
+        github: "https://github.com/Yamahalu69/GodoGameMake.git",
+        link: "https://drive.google.com/file/d/1-X65OEIN8X07Zs56emzbf40QG-OF9rWQ/view?usp=drive_link",
+        venues: [
+            {name:'学校の若きクリエーター展',date:'2025年2月'},
+        ],
+        techPoints: "敵が透明な時に輪郭だけを薄っすら出てきたり消えたりするようにしたこと,投げ物と敵が当たった時の判定",
         designNotes: null,
         implementationTheme: null,
-        troubleshooting: null,
-        performance: null
+        troubleshooting: "透明にしつつ当たり判定を残すところや敵にアイテムが当たった時の動きが変になることがあったこと",
+        performance: "ナイフや透明化解除アイテムの投げにクールタイムがない点"
     }
 ]
 export const gameJam: GameJam[]=[
@@ -179,17 +181,33 @@ export const gameJam: GameJam[]=[
 
 export const certifications: Certification[]=[
     {
-        name: "",
-        date: "",
+        name: "MOSPowerPoint2019",
+        date: "2024年9月24日合格",
         category: "",
-        score: null,
-        status: '取得予定'
+        score: "930点",
+        status: '取得済み'
+    },
+    {
+        name: "Microsoft Azure AIFundamentals",
+        date: "2024年9月17日合格",
+        category: "",
+        score: "809点",
+        status: '取得済み'
     }
 ]
 
 export const timeline: TimelineItem[]=[
     {
-        year: "",
-        event: ""
+        year: "2024年3月",
+        event: "滋賀県立石部高等学校 卒業"
+    },
+    {
+        year: "2024年4月",
+        event: "京都デザイン&テクノロジー専門学校 入学"
+    },
+    {
+        year: "2027年3月",
+        event: "京都デザイン&テクノロジー専門学校 卒業見込み",
     }
+
 ]

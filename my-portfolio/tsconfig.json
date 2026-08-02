@@ -6,6 +6,6 @@
   ],
   "compilerOptions": {
     "jsx": "react",
-    "types": ["node"]
+    "types": ["node", "vite/client"]
   }
 }
