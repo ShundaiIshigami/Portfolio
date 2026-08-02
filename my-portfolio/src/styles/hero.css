@@ -18,7 +18,7 @@
   right: -200px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgb(100, 193, 255) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(100, 193, 255, 0.568) 0%, transparent 70%);
   pointer-events: none; /* クリックを透過させる */
 }
 
@@ -30,7 +30,7 @@
   left: -100px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgb(120, 230, 31) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(121, 230, 31, 0.527) 0%, transparent 70%);
   pointer-events: none;
 }
 
