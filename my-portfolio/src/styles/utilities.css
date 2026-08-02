@@ -68,7 +68,7 @@
 /* 塗りつぶしボタン（グラデーション） */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
-  color: #4fffff;
+  color: #eeff8f;
 }
 
 .btn-primary:hover {
