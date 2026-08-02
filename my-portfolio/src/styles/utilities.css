@@ -68,13 +68,13 @@
 /* 塗りつぶしボタン（グラデーション） */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
-  color: #fff;
+  color: #36aa4fe0;
 }
 
 .btn-primary:hover {
   opacity: 0.9;
   transform: translateY(-2px); /* 浮き上がるアニメーション */
-  box-shadow: 0 8px 24px rgba(124, 106, 247, 0.4);
+  box-shadow: 0 8px 24px rgba(16, 27, 129, 0.4);
 }
 
 /* 枠線だけのボタン */
